@@ -104,6 +104,8 @@ let character;
 let passwordLength = true;
 
 function generatePasswordOne() {
+  psOneEl.textContent= "";
+  copyOneEl.classList.add("hide");
   for (let i = 0; i < 15; i++) {
     let random = Math.floor(Math.random() * characters.length);
     let character = characters[random];
@@ -113,6 +115,8 @@ function generatePasswordOne() {
 }
 
 function generatePasswordTwo() {
+  psTwoEl.textContent= "";
+  copyTwoEl.classList.add("hide");
   for (let i = 0; i < 15; i++) {
     let random = Math.floor(Math.random() * characters.length);
     let character = characters[random];
@@ -132,16 +136,10 @@ function copyTwo() {
   copyTwoEl.classList.add("passwordBtn");
   
 }
-//fulfill the 15 character length requirement
-function lengthRequired() {
-  if (passwordLength) {
-    generatePasswordOne(), generatePasswordTwo();
-  }
-  passwordLength = false;
-}
+
 
 generateBtn.addEventListener("click", () => {
-  lengthRequired();
+  generatePasswordOne(), generatePasswordTwo();
 });
 
 //event listener for copying
