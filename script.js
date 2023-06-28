@@ -94,8 +94,9 @@ const characters = [
 let generateBtn = document.getElementById("generateBtn");
 let psOneEl = document.getElementById("passwordOne");
 let psTwoEl = document.getElementById("passwordTwo");
-let copyEl = document.getElementById("copy");
-
+let copyOneEl = document.getElementById("copyOne");
+let copyTwoEl = document.getElementById("copyTwo");
+let copy = document.createElement("copy");
 //15 characters long and 2 random pws
 //random number
 let random;
@@ -121,11 +122,15 @@ function generatePasswordTwo() {
 }
 //let user know they have copied the password
 function copyOne() {
-  copyEl.style = "display: flex;";
+  copyOneEl.classList.remove("hide");
+  copyOneEl.classList.add("passwordBtn");
+  
 }
 
 function copyTwo() {
-  copyEl.style = "display: flex;";
+  copyTwoEl.classList.remove("hide");
+  copyTwoEl.classList.add("passwordBtn");
+  
 }
 //fulfill the 15 character length requirement
 function lengthRequired() {
@@ -146,5 +151,5 @@ psOneEl.addEventListener("copy", () => {
 });
 
 psTwoEl.addEventListener("copy", () => {
-  copyOne();
+  copyTwo();
 });
