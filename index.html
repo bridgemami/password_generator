@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Password Generator" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Michael Bridgeman" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <!--no jpg file-->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="title">
+          Generate a
+          <span id="font-change">random password</span>
+        </h1>
+        <p id="supportText">Never use an insecure password again.</p>
+      </header>
+      <section class="generate">
+        <button id="generateBtn">Generate passwords</button>
+        <hr />
+        <section class="flex">
+          <p id="passwordOne" class="passwordBtn"></p>
+          <p id="passwordTwo" class="passwordBtn"></p>
+        </section>
+        <section class="flex">
+          <p id="copy" class="passwordBtn">Password Copied</p>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

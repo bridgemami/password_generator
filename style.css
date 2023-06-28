@@ -1,0 +1,96 @@
+/* importing the Karla and Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #1F2937;
+    width: 550px;
+    height: 550px;
+}
+
+hr {
+    border: #2F3E53 solid 1px;
+    width: 446px;
+    margin-bottom: 25px;
+}
+
+#title {
+    color: #FFFFFF;
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    line-height: 40px;
+    width: 372px;
+    margin: 50px auto 0 auto;
+}
+
+#font-change {
+    color: #4ADF86;
+    font-family: "Inter", sans-serif;
+    line-height: 40px;
+    display: block;
+}
+
+#supportText {
+    font-family: 'Inter', sans-serif;
+    color: #D5D4D8;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 28px;
+    width: 372px;
+    margin: 25px auto 25px auto;
+}
+.generate {
+    margin: 25px auto 50px auto;
+    width: 372px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+
+
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 446px;
+}
+
+.hide {
+    display: none;
+}
+
+#generateBtn {
+    display: block;
+    background-color: #10B981;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    width: 191px;
+    height: 42px;
+    border-radius: 6px;
+    padding: 9px 17px 9px 15px;
+    margin-bottom: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.passwordBtn {
+    background: #273549;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    width: 211px;
+    color:#55F991;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copy {
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
