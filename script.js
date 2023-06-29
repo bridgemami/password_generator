@@ -101,9 +101,9 @@ let copy = document.createElement("copy");
 //random number
 let random;
 let character;
-let passwordLength = true;
 
 function generatePasswordOne() {
+    //if hit the generate button the text disappears and hides the button
   psOneEl.textContent= "";
   copyOneEl.classList.add("hide");
   for (let i = 0; i < 15; i++) {
@@ -115,6 +115,7 @@ function generatePasswordOne() {
 }
 
 function generatePasswordTwo() {
+      //if hit the generate button the text disappears and hides the button
   psTwoEl.textContent= "";
   copyTwoEl.classList.add("hide");
   for (let i = 0; i < 15; i++) {
@@ -137,7 +138,7 @@ function copyTwo() {
   
 }
 
-
+// event listener to generate the passwords
 generateBtn.addEventListener("click", () => {
   generatePasswordOne(), generatePasswordTwo();
 });
