@@ -96,7 +96,7 @@ let psOneEl = document.getElementById("passwordOne");
 let psTwoEl = document.getElementById("passwordTwo");
 let copyOneEl = document.getElementById("copyOne");
 let copyTwoEl = document.getElementById("copyTwo");
-let copy = document.createElement("copy");
+let copy = document.getElementById("copy");
 //15 characters long and 2 random pws
 //random number
 let random;
@@ -105,7 +105,7 @@ let character;
 function generatePassword(element1, element2) {
   //if hit the generate button the text disappears and hides the button
   element1.textContent = "";
-  element2.classList.add("hide");
+  copy.classList.add("hide");
   for (let i = 0; i < 15; i++) {
     let random = Math.floor(Math.random() * characters.length);
     let character = characters[random];
@@ -116,10 +116,11 @@ function generatePassword(element1, element2) {
 
 //let user know they have copied the password
 function copyPw(element) {
+  copy.classList.remove("hide");
+  copy.classList.add("flex");
   element.classList.remove("hide");
   element.classList.add("passwordBtn");
 }
-
 
 // event listener to generate the passwords
 generateBtn.addEventListener("click", () => {
