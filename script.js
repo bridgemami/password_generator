@@ -101,8 +101,6 @@ let numbers = document.getElementById("numbers");
 let noNumbers = document.getElementById("noNumbers");
 //15 characters long and 2 random pws
 //random number
-let random;
-let character;
 
 function generatePassword(element1) {
   //if hit the generate button the text disappears and hides the button
