@@ -16,21 +16,26 @@
     <main>
       <header>
         <h1 id="title">
-          Generate a
-          <span id="font-change">random password</span>
+          Generate a <span id="font-change">random password</span>
         </h1>
-        <p id="supportText">Never use an insecure password again.</p>
+        <p class="supportText">Never use an insecure password again.</p>
       </header>
-      <section class="generate">
+      <section>
+      <section>
+        <p><label for="numbers" class="supportText" id="support">How long would you like a password?</label></p>
+        <input type="number" id="numbers" name="numbers" class="passwordBtn" placeholder="Please enter a number" />
         <button id="generateBtn">Generate passwords</button>
         <hr />
-        <section class="flex">
-          <p id="passwordOne" class="passwordBtn"></p>
-          <p id="passwordTwo" class="passwordBtn"></p>
+      </section> 
+        <section id="pwFlex">
+        <section class="flexRow">
+          <p id="passwordOne" class="hide"></p>
+          <p id="passwordTwo" class="hide"></p>
         </section>
-        <section class="flex" id="copy">
+        <section class="flexRow" id="copy">
           <p id="copyOne" class="hide">Password One Copied</p>
           <p id="copyTwo" class="hide">Password Two Copied</p>
+        </section>
         </section>
       </section>
     </main>

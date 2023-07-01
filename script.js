@@ -97,34 +97,39 @@ let psTwoEl = document.getElementById("passwordTwo");
 let copyOneEl = document.getElementById("copyOne");
 let copyTwoEl = document.getElementById("copyTwo");
 let copy = document.getElementById("copy");
+let numbers = document.getElementById("numbers");
+let noNumbers = document.getElementById("noNumbers");
 //15 characters long and 2 random pws
 //random number
 let random;
 let character;
 
-function generatePassword(element1, element2) {
+function generatePassword(element1) {
   //if hit the generate button the text disappears and hides the button
-  element1.textContent = "";
-  copy.classList.add("hide");
-  for (let i = 0; i < 15; i++) {
-    let random = Math.floor(Math.random() * characters.length);
-    let character = characters[random];
-    element1.textContent += character;
+  let pwLength = numbers.value;
+    element1.textContent = "";
+    copy.classList.add("hide");
+    for (let i = 0; i < pwLength; i++) {
+      let random = Math.floor(Math.random() * characters.length);
+      let character = characters[random];
+      element1.textContent += character;
+    }
+    element1.classList.remove("hide");
+    element1.classList.add("passwordBtn");
+    element1.style = "cursor: text;";
   }
-  element1.style = "cursor: text;";
-}
 
 //let user know they have copied the password
 function copyPw(element) {
   copy.classList.remove("hide");
-  copy.classList.add("flex");
+  copy.classList.add("flexRow");
   element.classList.remove("hide");
   element.classList.add("passwordBtn");
 }
 
 // event listener to generate the passwords
 generateBtn.addEventListener("click", () => {
-  generatePassword(psOneEl, copyOneEl), generatePassword(psTwoEl, copyTwoEl);
+  generatePassword(psOneEl), generatePassword(psTwoEl, copyTwoEl);
 });
 
 //event listener for copying
