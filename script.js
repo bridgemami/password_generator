@@ -127,7 +127,7 @@ function copyPw(element) {
 
 // event listener to generate the passwords
 generateBtn.addEventListener("click", () => {
-  generatePassword(psOneEl), generatePassword(psTwoEl, copyTwoEl);
+  generatePassword(psOneEl), generatePassword(psTwoEl);
 });
 
 //event listener for copying
